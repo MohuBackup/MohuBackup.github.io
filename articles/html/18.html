@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>[干货]快速的搭建自己的翻墙服务器！ - 膜乎</title>
+<meta name="keywords" content="干货,快速,搭建,翻墙,服务器"/>
+<meta name="description" content="[干货]快速的搭建自己的翻墙服务器！ - 本文版权归属新蛤社所有，未经许可严禁任何转载。  本文基于Ubuntu 16.04环境安装通过，建议使用相同环境。 鉴于中国互联网的稳定性，我们不保证此教程在任何时间、地区均可用。 这篇文章将使用Outline帮助你快速搭建自己的翻墙服务器。  前言  在..."/>
+<base href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/"/><!--[if IE]></base><![endif]-->
+<link href="https://via.hypothes.is/oe_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/static/css/default/img/favicon.ico?v=20180503" rel="shortcut icon" type="image/x-icon"/>
+
+<link rel="stylesheet" type="text/css" href="https://via.hypothes.is/oe_/https://web.archive.org/web/20181101090348cs_/https://www.mohu.club/static/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="https://via.hypothes.is/oe_/https://web.archive.org/web/20181101090348cs_/https://www.mohu.club/static/css/icon.css"/>
+
+<link href="https://via.hypothes.is/oe_/https://web.archive.org/web/20181101090348cs_/https://www.mohu.club/static/css/default/common.css?v=20180503" rel="stylesheet" type="text/css"/>
+<link href="https://via.hypothes.is/oe_/https://web.archive.org/web/20181101090348cs_/https://www.mohu.club/static/css/default/link.css?v=20180503" rel="stylesheet" type="text/css"/>
+<link href="https://via.hypothes.is/oe_/https://web.archive.org/web/20181101090348cs_/https://www.mohu.club/static/js/plug_module/style.css?v=20180503" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript">
+	var _8E59F943B7D719A81354ED856BD12F1B="";
+	var G_POST_HASH=_8E59F943B7D719A81354ED856BD12F1B;
+	var G_INDEX_SCRIPT = "";
+	var G_SITE_NAME = "膜乎";
+	var G_BASE_URL = "https://web.archive.org/web/20181101090348/https://www.mohu.club/";
+	var G_STATIC_URL = "https://web.archive.org/web/20181101090348/https://www.mohu.club/static";
+	var G_UPLOAD_URL = "../../uploads";
+	var G_USER_ID = "";
+	var G_USER_NAME = "";
+	var G_UPLOAD_ENABLE = "N";
+	var G_UNREAD_NOTIFICATION = 0;
+	var G_NOTIFICATION_INTERVAL = 100000;
+	var G_CAN_CREATE_TOPIC = "";
+	var G_ADVANCED_EDITOR_ENABLE = "Y";
+	var FILE_TYPES = "jpg,jpeg,png,gif,doc,docx,pdf,psd";
+
+
+	</script>
+<script src="https://via.hypothes.is/js_/https://web.archive.org/web/20181101090348js_/https://www.mohu.club/static/js/jquery.2.js?v=20180503" type="text/javascript"></script>
+<script src="https://via.hypothes.is/js_/https://web.archive.org/web/20181101090348js_/https://www.mohu.club/static/js/jquery.form.js?v=20180503" type="text/javascript"></script>
+<script src="https://via.hypothes.is/js_/https://web.archive.org/web/20181101090348js_/https://www.mohu.club/static/js/plug_module/plug-in_module.js?v=20180503" type="text/javascript"></script>
+<script src="https://via.hypothes.is/js_/https://web.archive.org/web/20181101090348js_/https://www.mohu.club/static/js/aws.js?v=20180503" type="text/javascript"></script>
+<script src="https://via.hypothes.is/js_/https://web.archive.org/web/20181101090348js_/https://www.mohu.club/static/js/aw_template.js?v=20180503" type="text/javascript"></script>
+<script src="https://via.hypothes.is/js_/https://web.archive.org/web/20181101090348js_/https://www.mohu.club/static/js/app.js?v=20180503" type="text/javascript"></script>
+<script type="text/javascript" src="https://via.hypothes.is/js_/https://web.archive.org/web/20181101090348js_/https://www.mohu.club/static/js/compatibility.js"></script>
+<script type="text/javascript" src="https://via.hypothes.is/js_/https://web.archive.org/web/20181101090348js_/https://www.mohu.club/static/js/zh.js"></script>
+<!--[if lte IE 8]>
+	<script type="text/javascript" src="https://www.mohu.club/static/js/respond.js"></script>
+<![endif]-->
+</head>
+<noscript unselectable="on" id="noscript">
+    <div class="aw-404 aw-404-wrap container">
+        <img src="https://via.hypothes.is/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/static/common/no-js.jpg">
+        <p>你的浏览器禁用了JavaScript, 请开启后刷新浏览器获得更好的体验</p>
+    </div>
+</noscript>
+<body>
+	<div class="aw-top-menu-wrap">
+		<div class="container">
+			<!-- logo -->
+			<div class="aw-logo hidden-xs">
+				<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/"></a>
+			</div>
+			<!-- end logo -->
+			<!-- 搜索框 -->
+			<div class="aw-search-box  hidden-xs hidden-sm">
+				<form class="navbar-search" action="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/search/" id="global_search_form" method="post">
+					<input class="form-control search-query" type="text" placeholder="搜索问题、话题或人" autocomplete="off" name="q" id="aw-search-query"/>
+					<span title="搜索" id="global_search_btns" onclick="$('#global_search_form').submit();"><i class="icon icon-search"></i></span>
+					<div class="aw-dropdown">
+						<div class="mod-body">
+							<p class="title">输入关键字进行搜索</p>
+							<ul class="aw-dropdown-list collapse"></ul>
+							<p class="search"><span>搜索:</span><a onclick="$('#global_search_form').submit();"></a></p>
+						</div>
+						<div class="mod-footer">
+							<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/publish" onclick="$('#header_publish').click();" class="pull-right btn btn-mini btn-success publish">发起问题</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end 搜索框 -->
+			<!-- 导航 -->
+			<div class="aw-top-nav navbar">
+				<div class="navbar-header">
+				  <button class="navbar-toggle pull-left">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+				<nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+				  <ul class="nav navbar-nav">
+										<li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/" class=""><i class="icon icon-list"></i> 发现</a></li>
+					<!-- -->
+
+					<!-- <li><a href="https://www.mohu.club/question/" class="">问题</a></li>
+
+					<li><a href="https://www.mohu.club/article/" class="active">文章</a></li> -->
+
+					<li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/topic/"><i class="icon icon-topic"></i> 话题</a></li>
+										<li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/help/"><i class="icon icon-bulb"></i> 公告</a></li>					<li>
+						<a style="font-weight:bold;">· · ·</a>
+						<div class="dropdown-list pull-right">
+							<ul id="extensions-nav-list">
+																							</ul>
+						</div>
+					</li>
+				  </ul>
+				</nav>
+			</div>
+			<!-- end 导航 -->
+			<!-- 用户栏 -->
+			<div class="aw-user-nav">
+				<!-- 登陆&注册栏 -->
+									<a class="login btn btn-normal btn-primary" href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/account/login/">登录</a>
+					<a class="register btn btn-normal btn-success" href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/account/register/">注册</a>								<!-- end 登陆&注册栏 -->
+			</div>
+			<!-- end 用户栏 -->
+			<!-- 发起 -->
+						<!-- end 发起 -->
+		</div>
+	</div>
+	
+    <script>
+        $(function () {
+            var $changeSkin = $("#changeSkin"), $skinList = $("#skinList");
+            $changeSkin.mouseenter(function () {
+                $skinList.stop(true,true).show();
+            });
+            $changeSkin.mouseleave(function (e) {
+                $skinList.hide();
+            });
+            $skinList.mouseover(function () {
+                $(this).stop(true,true).show();
+            });
+            $skinList.mouseleave(function (e) {
+                $(this).hide();
+            })
+        })
+    </script><style>
+    .bdshare-button-style0-16 a{
+        margin: 6px 15px 6px 10px;
+    }
+    .bd_weixin_popup .bd_weixin_popup_main {
+        padding: 10px 10px;
+    }
+</style>
+<div class="aw-container-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="aw-content-wrap clearfix">
+                <div class="col-sm-12 col-md-9 aw-main-content aw-article-content">
+                    <div class="aw-mod aw-topic-bar" id="question_topic_editor" data-type="article" data-id="18">
+                        <div class="tag-bar clearfix">
+                                                                                    <span class="topic-tag" data-id="21">
+                                <a class="text" href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/topic/GFW%EF%BC%88%E4%B8%AD%E5%9B%BD%E7%BD%91%E7%BB%9C%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%89">GFW（中国网络防火墙）</a>
+                            </span>
+                                                        
+                                                    </div>
+                    </div>
+                    <div class="aw-mod aw-question-detail">
+                        <div class="mod-head">
+                            <h1>
+                                [干货]快速的搭建自己的翻墙服务器！                            </h1>
+                            <input type="hidden" id="share_content" value=""/>
+                            <input type="hidden" id="share_url" value=""/>
+                            <input type="hidden" id="share_title" value=""/>
+                                                    </div>
+                        <div class="mod-body">
+                            <div class="content markitup-box">
+                                本文版权归属新蛤社所有，未经许可严禁任何转载。<br/>
+<br/>
+本文基于Ubuntu 16.04环境安装通过，建议使用相同环境。<br/>
+鉴于中国互联网的稳定性，我们不保证此教程在任何时间、地区均可用。<br/>
+这篇文章将使用Outline帮助你快速搭建自己的翻墙服务器。<br/>
+<br/>
+前言<br/>
+<br/>
+在跟着做前，请确保你有足够的计算机使用常识，否则出了问题你解决不了。<br/>
+<br/>
+在跟着做前，请确保你有足够的计算机使用常识，否则出了问题你解决不了。<br/>
+<br/>
+在跟着做前，请确保你有足够的计算机使用常识，否则出了问题你解决不了。<br/>
+<br/>
+文章章节<br/>
+<br/>
+0 准备<br/>
+<br/>
+1下载Outline Manager 并且安装<br/>
+<br/>
+2 在服务器上获取Api key<br/>
+<br/>
+3 配置Outline Manager<br/>
+<br/>
+4 导出SS://链接给客户端使用<br/>
+<br/>
+5 连接到你的服务器<br/>
+<br/>
+6 你已连接到国际互联网 &amp; 几句忠告<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+联系方式<br/>
+<br/>
+<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://twitter.com/XinHaNewsAgency" target="_blank">推特</a> <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://t.me/telehathgroup" target="_blank">Telegram 群组</a> <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://t.me/XinHaNewsAgency" target="_blank">Telegram 频道</a> <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://mohu.ml/" target="_blank">膜乎</a><br/>
+<br/>
+STEP.0 准备<br/>
+<br/>
+1.一个境外的VPS服务器（Vultr、搬瓦工等，购买教程可以去搜索“Vultr 购买教程”），并且服务器的IP未被屏蔽。<br/>
+<br/>
+2.一台运行着Windows 7/8/10的PC，且能连接到你的服务器。<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+STEP.1 下载Outline Manager 并且安装<br/>
+<br/>
+官网链接：<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/manager/Outline-Manager.exe" target="_blank">点此下载</a>（如果被墙了请使用备用下载地址）</p><br/>
+备用下载：点此下载<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+安装方式与安装其他软件相同。<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+STEP.2 在服务器上获取Api key<br/>
+<br/>
+在服务器登录，并在终端内运行这行命令：curl -sS https://get.docker.com/ | sh<br/>
+执行：wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh | bash<br/>
+终端将输出如下内容，请将其复制备用。<br/>
+<br/>
+{<br/>
+<br/>
+"apiUrl": "https://xxxxxxxxxxxxxxxxxxxxxxxxx",<br/>
+<br/>
+"certSha256": "xxxxxxxxxxxxxxxxxxxxxxxxxxx"<br/>
+<br/>
+}<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+STEP.3 配置Outline Manager<br/>
+<br/>
+<br/>
+1.打开安装好的Outline Manager，界面看起来应该像下面这样：Outline Manager 欢迎界面<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/97282477a662117c10b490765fb8eda7.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/97282477a662117c10b490765fb8eda7.png" class="img-polaroid" title="e007861b15fbca94c5946.png" alt="e007861b15fbca94c5946.png"/></a>
+</div>
+<br/>
+2. 看到窗口右面的滚动条了吗？翻到最底下，然后点一下红圈标注的按钮：Outline Manager 欢迎界面<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/20af2e87c27548d0ea7b96ef274e87ed.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/20af2e87c27548d0ea7b96ef274e87ed.png" class="img-polaroid" title="d5be38bdeb6b55bc00695.png" alt="d5be38bdeb6b55bc00695.png"/></a>
+</div>
+<br/>
+ <br/>
+3. 看到这个页面了吧！在红圈内的输入框 粘贴 刚才从终端复制好的内容，然后点击“DONE”按钮，程序会自动添加服务器信息。Outline Manager 配置服务器页面<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/04210d0cc569d393555971f32f5dbd6e.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/04210d0cc569d393555971f32f5dbd6e.png" class="img-polaroid" title="ab5e1c496eb528dd4902e.png" alt="ab5e1c496eb528dd4902e.png"/></a>
+</div>
+<br/>
+<br/>
+<br/>
+STEP.4 导出SS://链接给客户端使用<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/4a1a029579302a46dad034ed63599373.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/4a1a029579302a46dad034ed63599373.png" class="img-polaroid" title="ae40d7d4e0ca09804f784.png" alt="ae40d7d4e0ca09804f784.png"/></a>
+</div>
+<br/>
+<br/>
+在上一步配置完成后，Outline Manager会自动进入主界面，你的主界面应该看起来是这个样子的：Outline Manager 主界面按照下面各图点击红色框出的按钮<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/35356cc83094ff24ca32814e85dcfeca.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/35356cc83094ff24ca32814e85dcfeca.png" class="img-polaroid" title="37c6bfd94174c6fa15004.png" alt="37c6bfd94174c6fa15004.png"/></a>
+</div>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/6b313b34b6262822ffca9118550bb804.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/6b313b34b6262822ffca9118550bb804.png" class="img-polaroid" title="e12f3ed1b6968d293d25a.png" alt="e12f3ed1b6968d293d25a.png"/></a>
+</div>
+<br/>
+"GET CONNECTED" 按钮移动上去才会背景变灰<br/>
+点击"CONNECT THIS DEVICE"<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/e205e06b1c955007d20824e3951465b1.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/e205e06b1c955007d20824e3951465b1.png" class="img-polaroid" title="c0a39e8848ce9353a4abe.png" alt="c0a39e8848ce9353a4abe.png"/></a>
+</div>
+<br/>
+ <br/>
+点击"COPY"来导出SS://链接到剪贴板<br/>
+<br/>
+<br/>
+到这里，我们成功导出了SS://链接，接下来继续讲述如何使用SS://链接。<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+STEP.5 连接到你的服务器<br/>
+<br/>
+下载Shadow Socks客户端<br/>
+<br/>
+Android：Outline Android客户端 - Google Play<br/>
+<br/>
+iOS &amp; Mac OS X：暂无，Outline支持iOS &amp; Mac OS X后本文会更新。暂时请考虑使用Shadow Rocket代替，关于Shadow Rocket的使用教程还请多多百度。<br/>
+<br/>
+Windows：Outline版SS客户端<br/>
+<br/>
+我们不保证所有客户端没有后门。<br/>
+<br/>
+Outline Manager导出的是正常的SS://链接，理论上支持原版Shadow Socks、Shadow Socks R、Shadow rocket等连接。如果不能链接请尝试启用"UDP 转发"功能。<br/>
+<br/>
+2. 打开客户端，导入链接<br/>
+<br/>
+Windows 操作方法：添加链接<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/e1b7d3443760c0aa9b4bfba677a87642.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/e1b7d3443760c0aa9b4bfba677a87642.png" class="img-polaroid" title="b15457c8d6afda36311f0.png" alt="b15457c8d6afda36311f0.png"/></a>
+</div>
+<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/e205e06b1c955007d20824e3951465b1.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/e205e06b1c955007d20824e3951465b1.png" class="img-polaroid" title="c0a39e8848ce9353a4abe.png" alt="c0a39e8848ce9353a4abe.png"/></a>
+</div>
+<br/>
+<br/>
+<br/>
+点击链接稍等10s左右，程序将自动连接，届时电脑可正常访问国际互联网。<br/>
+<br/>
+Android 操作方法：<br/>
+<br/>
+1.在手机上复制SS://链接后打开Outline，会自动提示添加，点击"ADD SERVER"即可添加。<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/1389313504676c75aa4545cf01e15135.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/1389313504676c75aa4545cf01e15135.png" class="img-polaroid" title="b3cb7ff8c6a4fa932579e.png" alt="b3cb7ff8c6a4fa932579e.png"/></a>
+</div>
+<br/>
+就像这个样子<br/>
+2. 添加成功后点击"CONNECT"点击"CONNECT"<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/e205e06b1c955007d20824e3951465b1.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/e205e06b1c955007d20824e3951465b1.png" class="img-polaroid" title="c0a39e8848ce9353a4abe.png" alt="c0a39e8848ce9353a4abe.png"/></a>
+</div>
+<br/>
+ <br/>
+3. 检查自己手机的通知栏是否有如下通知，如果有，则恭喜你成功连接到了国际互联网！[删除线]才不是Android P呢╭(╯^╰)╮[/删除线]<br/>
+<br/>
+<div class="aw-upload-img-list active">
+	<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/0d349951f7dcd813e8d192a03eda52c6.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/0d349951f7dcd813e8d192a03eda52c6.png" class="img-polaroid" title="1447800c838a10c6c3b89.png" alt="1447800c838a10c6c3b89.png"/></a>
+</div>
+<br/>
+<br/>
+<br/>
+STEP.6 你已连接到国际互联网 &amp; 几句忠告<br/>
+<br/>
+恭喜！此篇教程到这里就可以了。但是，请记住如下几点：<br/>
+<br/>
+永远不要向不信任的人共享你的SS://链接。记住，某个服务器同时连接的不明流量越多，这个服务器越有可能被墙。<br/>
+截图记得打码。<br/>
+不要乱对别人说我会翻墙一类的，否则您就是免费给网警送上门查水表。
+                                                                <div class="aw-upload-img-list">
+                                                                                                    <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/af51a18576a9c919251eee52df73dfe3.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/af51a18576a9c919251eee52df73dfe3.png" class="img-polaroid" alt="7774e68c8eba2cd6c1cf2.png"/></a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/uploads/article/20180324/1d6bc99e2f10c7ec197700d43fb81eb8.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/article/20180324/1d6bc99e2f10c7ec197700d43fb81eb8.png" class="img-polaroid" alt="231728b5a9c9582d9e859.png"/></a>
+                                                                                                                                                                                                                                </div>
+                                
+                                                                <ul class="aw-upload-file-list">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                            </div>
+                            <div class="meta clearfix">
+                                <div class="aw-article-vote pull-left disabled">
+                                    <a href="javascript:;" class="agree" onclick="AWS.User.article_vote($(this), 18, 1);"><i class="icon icon-agree"></i> <b>3</b></a>
+                                                                    </div>
+
+                                <span class="pull-right  more-operate">
+                                    
+                                    
+                                    <a class="text-color-999 dropdown-toggle" data-toggle="dropdown" id="article_share">
+                                        <i class="icon icon-share"></i> 分享                                    </a>
+                                    <!--<div aria-labelledby="dropdownMenu" role="menu" class="aw-dropdown shareout pull-right">
+                                        <ul class="aw-dropdown-list">
+                                            <li><a onclick="AWS.User.share_out({webid: 'tsina', content: $(this).parents('.aw-question-detail').find('.markitup-box')});"><i class="icon icon-weibo"></i> 微博</a></li>
+											<li><a onclick="AWS.User.share_out({webid: 'qzone', content: $(this).parents('.aw-question-detail')});"><i class="icon icon-qzone"></i> QZONE</a></li>
+											<li><a onclick="AWS.User.share_out({webid: 'weixin', content: $(this).parents('.aw-question-detail')});"><i class="icon icon-wechat"></i> 微信</a></li>
+                                        </ul>
+                                    </div>-->
+                                    <div class="bdsharebuttonbox aw-dropdown shareout pull-right">
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+									</div>
+
+                                    <em class="text-color-999">2018-03-24</em>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mod-footer">
+                                                        <div class="aw-article-voter">
+                                                                <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/people/EzawaNico" class="voter" data-toggle="tooltip" data-placement="right" data-original-title="EzawaNico"><img alt="EzawaNico" src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/avatar/000/00/00/01_avatar_mid.jpg"/></a>
+                                                                <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/people/globalHe" class="voter" data-toggle="tooltip" data-placement="right" data-original-title="globalHe"><img alt="globalHe" src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/avatar/000/00/00/56_avatar_mid.jpg"/></a>
+                                                                <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/people/%E6%85%B6%E5%A4%A9" class="voter" data-toggle="tooltip" data-placement="right" data-original-title="慶天"><img alt="慶天" src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/avatar/000/00/00/07_avatar_mid.jpg"/></a>
+                                                                <!--<a class="more-voters">...</a>-->
+                            </div>
+                                                    </div>
+                    </div>
+
+                    <!-- 文章评论 -->
+                    <div class="aw-mod">
+                        <div class="mod-head common-head">
+                            <h2>1 个评论</h2>
+                        </div>
+
+                        <div class="mod-body aw-feed-list">
+                            
+                                                                <div class="aw-item" id="answer_list_60">
+                                    <div class="mod-head">
+                                        <a class="aw-user-img aw-border-radius-5" href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/people/globalHe">
+                                            <img src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/avatar/000/00/00/56_avatar_mid.jpg" alt="globalHe"/>
+                                        </a>
+                                        <p>
+                                            <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/people/globalHe">globalHe</a>                                        </p>
+                                    </div>
+                                    <div class="mod-body">
+                                        <div class="markitup-box">
+                                            吼啊~~                                        </div>
+                                    </div>
+                                    <div class="mod-footer">
+                                        <div class="meta">
+                                            <span class="pull-right text-color-999">2018-03-25 09:26</span>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                                                    </div>
+
+                        
+                                            </div>
+                    <!-- end 文章评论 -->
+
+                    <!-- 回复编辑器 -->
+                    <div class="aw-mod aw-article-replay-box">
+                        <a name="answer_form"></a>
+                                                <p align="center">要回复文章请先<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/account/login/">登录</a>或<a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/account/register/">注册</a></p>
+                                            </div>
+                    <!-- end 回复编辑器 -->
+                </div>
+                <!-- 侧边栏 -->
+                <div class="col-sm-12 col-md-3 aw-side-bar hidden-sm hidden-xs">
+                    <!-- 发起人 -->
+                                        <div class="aw-mod user-detail">
+                        <div class="mod-head">
+                            <h3>发起人</h3>
+                        </div>
+                        <div class="mod-body">
+                            <dl>
+                                <dt class="pull-left aw-border-radius-5">
+                                    <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/people/%E6%96%B0%E8%9B%A4%E7%A4%BE"><img alt="新蛤社" src="/im_/https://web.archive.org/web/20181101090348im_/https://www.mohu.club/uploads/avatar/000/00/00/63_avatar_mid.jpg"/></a>
+                                </dt>
+                                <dd class="pull-left">
+                                    <a class="aw-user-name" href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/people/%E6%96%B0%E8%9B%A4%E7%A4%BE" data-id="63">新蛤社</a>
+                                                                            <i class="icon-v i-ve" title="企业认证"></i>
+                                    
+                                                                        <p>新蛤社官方账号</p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="mod-footer clearfix">
+                                                        <div class="aw-topic-bar">
+                                <div class="topic-bar clearfix">
+                                    <span class="pull-left text-color-999">
+                                        擅长话题 : &nbsp;
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/topic/%E8%86%9C%E4%B9%8E" class="text" data-id="2">膜乎</a>
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/topic/%E4%B9%B3%E5%8C%85" class="text" data-id="160">乳包</a>
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/topic/%E8%86%9C%E8%9B%A4" class="text" data-id="4">膜蛤</a>
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/topic/%E6%94%BF%E6%B2%BB" class="text" data-id="8">政治</a>
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/topic/%E4%B9%A0%E8%BF%91%E5%B9%B3" class="text" data-id="144">习近平</a>
+                                    </span>
+                                                                    </div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <!-- end 发起人 -->
+
+                                        <!-- 推荐内容 -->
+                    <div class="aw-mod">
+                        <div class="mod-head">
+                            <h3>推荐内容</h3>
+                        </div>
+                        <div class="mod-body">
+                            <ul>
+                                                                <li>
+                                                                        <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/1916">如何评价大陆特供版 Flash Player 的流氓行为？</a>
+                                                                    </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    <!-- end 推荐内容 -->
+                    
+                                        <!-- 相关问题 -->
+                    <div class="aw-mod aw-text-align-justify question-related-list">
+                        <div class="mod-head">
+                            <h3>相关问题</h3>
+                        </div>
+                        <div class="mod-body font-size-12">
+                            <ul>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/330">如何看待某学校学生翻墙被抓事件？</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/628">怎样快速教小白翻墙？</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/672">习会翻墙去外网玩吗？</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/766">如果在mc的多人服务器中建造一个长者像会发生什么</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/361">习惯性地开启禁ping会对服务器有哪些影响？</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/143">关于翻墙，有什么特殊的技巧？</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/937">模拟铁路游戏怎么样快速安放铁轨？</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/2332">进入新学校，如何快速识别周围的蛤丝</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/3506">为什么有人在学会翻墙之后还自愿膜包？</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/4050">品葱网站真的是墙内的中国人，利用美国服务器建的网站吗？</a></li>
+                                                                <li><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.mohu.club/question/818">在国内会不会有永远无法翻墙的那一天？</a></li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    <!-- end 相关问题 -->
+                                    </div>
+                <!-- end 侧边栏 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var ANSWER_EDIT_TIME = 86400;
+
+    $(document).ready(function () {
+        if ($('.aw-article-vote.disabled').length)
+        {
+            $('.aw-article-vote.disabled a').attr('onclick', '');
+        }
+
+        AWS.at_user_lists('#wmd-input');
+
+        AWS.Init.init_article_comment_box($('.aw-article-comment'));
+        $("#article_share").click(function(){
+            $('#share_content').val('[干货]快速的搭建自己的翻墙服务器！');
+            $('#share_title').val('[干货]快速的搭建自己的翻墙服务器！');
+            $('#share_url').val(G_BASE_URL + '/article/18');
+
+        });
+        window._bd_share_config={
+            "common":{
+                bdText : '',
+                bdDesc : '',
+                bdUrl : G_BASE_URL + '/question/',
+                onBeforeClick:function(cmd,config){
+                    return {bdText:$('#share_content').val(),
+                        bdDesc:$('#share_title').val(),
+                        bdUrl:$('#share_url').val()
+                    }
+
+                }
+            },
+            "share":{}
+        };
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=''];
+    });
+</script>
+
+<div class="aw-footer-wrap">
+    <div class="aw-footer">
+        Copyright © 2018<span class="hidden-xs"> - 膜ICP备000002号, All Rights Reserved</span>
+
+        <span class="hidden-xs">Powered By <a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/http://www.wecenter.com/?copyright" target="blank">WeCenter 3.2.0</a></span>
+
+            </div>
+</div>
+
+<a class="aw-back-top hidden-xs" href="javascript:;" onclick="$.scrollTo(1, 600, {queue:true});"><i class="icon icon-up"></i></a>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="/matomo/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script><center><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://www.paypal.me/Ezawatami" target="_blank"><span class="label label-primary">捐赠我们</span></a><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://skyliness.net/" target="_blank"><span class="label label-success">获取翻墙工具</span></a><a href="https://via.hypothes.is/https://web.archive.org/web/20181101090348/https://twitter.com/XinHaNewsAgency" target="_blank"><span class="label label-warning">@新蛤社</span></a></center>
+<!-- DO NOT REMOVE -->
+<div id="aw-ajax-box" class="aw-ajax-box"></div>
+
+<div style="display:none;" id="__crond">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#__crond').html(unescape('%3Cimg%20src%3D%22' + G_BASE_URL + '/crond/run/1541063029%22%20width%3D%221%22%20height%3D%221%22%20/%3E'));
+        });
+    </script>
+</div>
+
+
+<!-- Escape time: 0.19164705276489 --><!-- / DO NOT REMOVE -->
+
+</body>
+</html>
