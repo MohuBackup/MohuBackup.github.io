@@ -38,7 +38,7 @@
         "user-id": 7,
         "user-url": "%E6%85%B6%E5%A4%A9",
         "user-name": "慶天",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/00/07_avatar_mid.jpg"
     },
     {
@@ -73,14 +73,14 @@
         "user-id": 13,
         "user-url": "people",
         "user-name": "wangziraniop",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/00/13_avatar_mid.jpg"
     },
     {
         "user-id": 16,
         "user-url": "admin",
         "user-name": "匿名用户",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/00/16_avatar_mid.jpg"
     },
     {
@@ -178,14 +178,14 @@
         "user-id": 39,
         "user-url": "%E8%9B%A4%E5%B0%BC%E7%8E%9B",
         "user-name": "蛤尼玛",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/00/39_avatar_mid.jpg"
     },
     {
         "user-id": 40,
         "user-url": "%E6%B1%9F%E8%BE%B9%E6%B2%BC%E6%B3%BD%E7%9A%84%E6%9D%91%E6%B0%91",
         "user-name": "江边沼泽的村民",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/00/40_avatar_mid.jpg"
     },
     {
@@ -199,7 +199,7 @@
         "user-id": 48,
         "user-url": "%E7%87%95%E5%B1%B1%E9%B9%B3%E5%A4%B4%E5%8A%A0%E5%B7%A5%E5%8E%82",
         "user-name": "燕山鹳头加工厂",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/00/48_avatar_mid.jpg"
     },
     {
@@ -318,14 +318,14 @@
         "user-id": 100,
         "user-url": "%E8%86%9C%E5%8A%A1%E9%99%A2%E6%80%BB%E7%90%86",
         "user-name": "膜务院总理",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/01/00_avatar_mid.jpg"
     },
     {
         "user-id": 109,
         "user-url": "%E6%BC%B1%E6%BA%90%E5%AD%90",
         "user-name": "漱源子",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -339,7 +339,7 @@
         "user-id": 115,
         "user-url": "%E5%9C%86%E5%91%A8%E7%8E%87%E7%9A%84%E5%8F%B2%E8%AF%97",
         "user-name": "圆周率的史诗",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -493,7 +493,7 @@
         "user-id": 195,
         "user-url": "%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%B2%BB%E4%B8%A7%E5%A7%94%E5%91%98",
         "user-name": "习近平治丧委员",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/01/67_avatar_mid.jpg"
     },
     {
@@ -507,7 +507,7 @@
         "user-id": 206,
         "user-url": "%E9%95%BF%E8%80%85%E7%9A%84%E5%BF%A0%E5%AE%9E%E7%B2%89%E4%B8%9D",
         "user-name": "长者的忠实粉丝",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -570,7 +570,7 @@
         "user-id": 253,
         "user-url": "spencercjh",
         "user-name": "spencercjh",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -759,7 +759,7 @@
         "user-id": 372,
         "user-url": "%E7%9F%A5%E5%90%8D%E8%AE%B0%E8%80%85%E5%BC%A0%E5%AE%9D%E5%8D%8E",
         "user-name": "知名记者张宝华",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/03/72_avatar_mid.jpg"
     },
     {
@@ -808,21 +808,21 @@
         "user-id": 396,
         "user-url": "%E6%9C%BA%E5%99%A8",
         "user-name": "机器",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
         "user-id": 399,
         "user-url": "%E9%95%B7%E9%96%80",
         "user-name": "長門",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/03/99_avatar_mid.jpg"
     },
     {
         "user-id": 401,
         "user-url": "dictator",
         "user-name": "dictator",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -913,7 +913,7 @@
         "user-id": 450,
         "user-url": "Winnie",
         "user-name": "Winnie",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -941,7 +941,7 @@
         "user-id": 460,
         "user-url": "%E9%A3%9F%E6%8C%87%E5%8F%A3%E5%BE%84%E5%8D%95%E8%A3%85%E7%82%AE",
         "user-name": "食指口径单装炮",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -955,7 +955,7 @@
         "user-id": 467,
         "user-url": "bignews",
         "user-name": "大新闻",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -976,7 +976,7 @@
         "user-id": 481,
         "user-url": "yin_bob",
         "user-name": "yin_bob",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/04/81_avatar_mid.jpg"
     },
     {
@@ -1270,7 +1270,7 @@
         "user-id": 638,
         "user-url": "SophiePodolski",
         "user-name": "SophiePodolski",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/06/38_avatar_mid.jpg"
     },
     {
@@ -1410,7 +1410,7 @@
         "user-id": 709,
         "user-url": "%E8%A5%BF%E4%BA%9A%E6%B4%9B%E5%85%8B",
         "user-name": "西亚洛克",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -1452,7 +1452,7 @@
         "user-id": 726,
         "user-url": "Kasumi",
         "user-name": "Kasumi",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -1466,7 +1466,7 @@
         "user-id": 731,
         "user-url": "%E8%86%9C%E6%B3%95%E8%B4%A4%E8%80%85",
         "user-name": "膜法贤者",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -1599,14 +1599,14 @@
         "user-id": 827,
         "user-url": "Mogicatz",
         "user-name": "Mogicatz",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
         "user-id": 831,
         "user-url": "%E6%B1%9F%E7%85%AE%E7%BF%92",
         "user-name": "江煮習",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/08/31_avatar_mid.jpg"
     },
     {
@@ -1634,7 +1634,7 @@
         "user-id": 842,
         "user-url": "hafnium",
         "user-name": "hafnium",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/08/42_avatar_mid.jpg"
     },
     {
@@ -1648,7 +1648,7 @@
         "user-id": 855,
         "user-url": "%E9%BD%90%E5%A5%A5%E5%A1%9E%E6%96%AF%E5%BA%93",
         "user-name": "齐奥塞斯库",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/08/55_avatar_mid.jpg"
     },
     {
@@ -1704,7 +1704,7 @@
         "user-id": 881,
         "user-url": "toadfan",
         "user-name": "江蛤蟆是坠吼的",
-        "user-description": "Es liebe die NS Bewegung!",
+        "user-description": "Es lebe die NS Bewegung!",
         "avatar": "/uploads/avatar/000/00/08/81_avatar_mid.jpg"
     },
     {
@@ -1760,7 +1760,7 @@
         "user-id": 898,
         "user-url": "%E6%B1%9F%E6%9D%A5",
         "user-name": "江来",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/08/98_avatar_mid.jpg"
     },
     {
@@ -1809,7 +1809,7 @@
         "user-id": 914,
         "user-url": "%E4%B8%8D%E5%A6%82%E9%A3%9F%E8%9B%A4%E5%8E%BB",
         "user-name": "不如食蛤去",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -1928,7 +1928,7 @@
         "user-id": 970,
         "user-url": "%E6%88%91%E4%B9%9F%E6%83%B3%E6%94%B9%E5%8F%98%E4%B8%AD%E5%9B%BD",
         "user-name": "我也想改变中国",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2138,7 +2138,7 @@
         "user-id": 1051,
         "user-url": "InternetExplorer",
         "user-name": "InternetExplorer",
-        "user-description": "",
+        "user-description": "InternetExplorer浏览器官方账号，世界上坠快的浏览器。",
         "avatar": "/uploads/avatar/000/00/10/51_avatar_mid.jpg"
     },
     {
@@ -2159,7 +2159,7 @@
         "user-id": 1058,
         "user-url": "MD%E5%B2%B3%E9%95%BF%E9%BE%99",
         "user-name": "MD岳长龙",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2292,7 +2292,7 @@
         "user-id": 1111,
         "user-url": "%E9%BB%84%E9%87%91%E5%BC%80%E5%8F%A3%E7%AC%91",
         "user-name": "黄金开口笑",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/11/11_avatar_mid.jpg"
     },
     {
@@ -2306,7 +2306,7 @@
         "user-id": 1116,
         "user-url": "cauchy",
         "user-name": "cauchy",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2341,7 +2341,7 @@
         "user-id": 1130,
         "user-url": "%E8%BE%BE%E6%96%87%E8%A5%BF",
         "user-name": "达文西",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/11/30_avatar_mid.jpg"
     },
     {
@@ -2390,7 +2390,7 @@
         "user-id": 1147,
         "user-url": "%E8%83%A1%E8%B6%8A%E6%99%9F",
         "user-name": "胡越晟",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2425,7 +2425,7 @@
         "user-id": 1158,
         "user-url": "%E8%86%9C%E6%B3%95%E5%90%83%E5%8C%85%E5%AD%90",
         "user-name": "膜法吃包子",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/11/58_avatar_mid.jpg"
     },
     {
@@ -2474,7 +2474,7 @@
         "user-id": 1171,
         "user-url": "%E5%AD%99%E7%AC%91%E5%B7%9D",
         "user-name": "孙笑川",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2523,7 +2523,7 @@
         "user-id": 1183,
         "user-url": "ngiklyu",
         "user-name": "逆旅",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2579,7 +2579,7 @@
         "user-id": 1199,
         "user-url": "%E5%BC%A0%E7%BB%8D%E5%BF%A0",
         "user-name": "张绍忠",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2600,21 +2600,21 @@
         "user-id": 1204,
         "user-url": "%E6%8B%89%E7%B1%B3%E9%9B%B7%E6%96%AF",
         "user-name": "拉米雷斯",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
         "user-id": 1206,
         "user-url": "%E8%B5%96%E5%8A%A0%E5%A9%86",
         "user-name": "赖加婆",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
         "user-id": 1207,
         "user-url": "%E5%9B%9E%E7%AD%94%E6%97%A0%E5%8F%AF%E5%A5%89%E5%91%8A",
         "user-name": "回答无可奉告",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2642,7 +2642,7 @@
         "user-id": 1225,
         "user-url": "TOP12130",
         "user-name": "TOP12130",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/12/25_avatar_mid.jpg"
     },
     {
@@ -2670,7 +2670,7 @@
         "user-id": 1241,
         "user-url": "%E8%9E%B3%E8%87%82%E5%BD%93%E8%BD%A6",
         "user-name": "螳臂当车",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2747,7 +2747,7 @@
         "user-id": 1287,
         "user-url": "%E5%AD%97%E8%AF%8D%E4%B8%8D%E5%AD%97%E8%AF%8D",
         "user-name": "字词不字词",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2810,7 +2810,7 @@
         "user-id": 1313,
         "user-url": "zeee",
         "user-name": "zeee",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2845,7 +2845,7 @@
         "user-id": 1332,
         "user-url": "q1977807234",
         "user-name": "q1977807234",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2859,7 +2859,7 @@
         "user-id": 1338,
         "user-url": "user10086",
         "user-name": "user10086",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2901,7 +2901,7 @@
         "user-id": 1353,
         "user-url": "sagerking",
         "user-name": "sagerking",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -2922,14 +2922,14 @@
         "user-id": 1356,
         "user-url": "xjpsqj",
         "user-name": "xjpsqj",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
         "user-id": 1360,
         "user-url": "%E5%8F%88%E7%B4%85%E5%8F%88%E5%B0%88",
         "user-name": "又紅又專",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/13/60_avatar_mid.jpg"
     },
     {
@@ -2943,14 +2943,14 @@
         "user-id": 1363,
         "user-url": "%E9%A6%83%E6%83%9B",
         "user-name": "馃惛",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/13/63_avatar_mid.jpg"
     },
     {
         "user-id": 1364,
         "user-url": "%E5%90%B8%E7%B2%BE%E7%93%B6",
         "user-name": "吸精瓶",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/13/64_avatar_mid.jpg"
     },
     {
@@ -3202,7 +3202,7 @@
         "user-id": 1421,
         "user-url": "WinnieBomb",
         "user-name": "WinnieBomb",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -3216,7 +3216,7 @@
         "user-id": 1426,
         "user-url": "hei544n",
         "user-name": "hei544n",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -3251,7 +3251,7 @@
         "user-id": 1434,
         "user-url": "%E5%85%B1%E5%92%8C%E5%9B%BD%E9%87%8C%E5%BD%93%E7%9A%87%E5%B8%9D",
         "user-name": "共和国里当皇帝",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -3272,7 +3272,7 @@
         "user-id": 1441,
         "user-url": "%E5%82%BB%E4%B8%AA%E5%84%BF%E7%8E%8B",
         "user-name": "傻个儿王",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -3405,7 +3405,7 @@
         "user-id": 1488,
         "user-url": "nocomment",
         "user-name": "nocomment",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -3594,7 +3594,7 @@
         "user-id": 1556,
         "user-url": "ECCAROUS",
         "user-name": "ECCAROUS",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/15/56_avatar_mid.jpg"
     },
     {
@@ -3622,14 +3622,14 @@
         "user-id": 1564,
         "user-url": "%E6%A2%81%E9%9D%99%E6%80%A1",
         "user-name": "梁静怡",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/15/64_avatar_mid.jpg"
     },
     {
         "user-id": 1570,
         "user-url": "firefly",
         "user-name": "firefly",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/15/70_avatar_mid.jpg"
     },
     {
@@ -3727,7 +3727,7 @@
         "user-id": 1604,
         "user-url": "Alexstrasza",
         "user-name": "Alexstrasza",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -3881,7 +3881,7 @@
         "user-id": 1656,
         "user-url": "yakun",
         "user-name": "yakun",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -3902,7 +3902,7 @@
         "user-id": 1663,
         "user-url": "%E5%BC%84%E5%A0%82%E5%A0%82%E4%B8%BB",
         "user-name": "弄堂堂主",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -4049,7 +4049,7 @@
         "user-id": 1731,
         "user-url": "%E5%88%81%E9%B1%BC",
         "user-name": "刁鱼",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -4077,7 +4077,7 @@
         "user-id": 1743,
         "user-url": "%E4%B8%BA%E4%BA%BA%E6%B0%91%E6%9C%8D%E5%8A%A1",
         "user-name": "为人民服务",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/17/43_avatar_mid.jpg"
     },
     {
@@ -4189,7 +4189,7 @@
         "user-id": 1792,
         "user-url": "hideoncaocong",
         "user-name": "hideoncaocong",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -4308,7 +4308,7 @@
         "user-id": 1862,
         "user-url": "Rguys",
         "user-name": "Rguys",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/18/62_avatar_mid.jpg"
     },
     {
@@ -4420,7 +4420,7 @@
         "user-id": 1911,
         "user-url": "kiana",
         "user-name": "kiana",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -4469,7 +4469,7 @@
         "user-id": 1934,
         "user-url": "YJLS",
         "user-name": "YJLS",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -4532,7 +4532,7 @@
         "user-id": 1973,
         "user-url": "%E8%84%91%E8%86%9C%E7%82%8E%E6%82%A3%E8%80%85",
         "user-name": "脑膜炎患者",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/19/73_avatar_mid.jpg"
     },
     {
@@ -4749,7 +4749,7 @@
         "user-id": 2082,
         "user-url": "%E4%B9%A0%E6%96%AF%E9%BB%91%E6%9A%97%E5%B0%8A%E4%B8%BB",
         "user-name": "习斯黑暗尊主",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/20/82_avatar_mid.jpg"
     },
     {
@@ -4945,14 +4945,14 @@
         "user-id": 2167,
         "user-url": "qwertyuiop",
         "user-name": "qwertyuiop",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
         "user-id": 2168,
         "user-url": "%E4%BD%A0%E4%B9%9F%E6%9C%89%E8%B4%A3%E4%BB%BB%E5%90%A7",
         "user-name": "你也有责任吧",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -4980,7 +4980,7 @@
         "user-id": 2179,
         "user-url": "weinikuanyi",
         "user-name": "weinikuanyi",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/21/79_avatar_mid.jpg"
     },
     {
@@ -5022,7 +5022,7 @@
         "user-id": 2198,
         "user-url": "lumiabc",
         "user-name": "lumiabc",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5071,7 +5071,7 @@
         "user-id": 2226,
         "user-url": "revolt",
         "user-name": "revolt",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/22/26_avatar_mid.jpg"
     },
     {
@@ -5169,7 +5169,7 @@
         "user-id": 2270,
         "user-url": "%E7%BB%B4%E5%B0%BC%E6%BB%9A%E5%87%BA%E5%85%8B",
         "user-name": "维尼滚出克",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/22/70_avatar_mid.jpg"
     },
     {
@@ -5183,7 +5183,7 @@
         "user-id": 2279,
         "user-url": "ly3850850",
         "user-name": "ly3850850",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5211,7 +5211,7 @@
         "user-id": 2291,
         "user-url": "Zam",
         "user-name": "Zam",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5225,7 +5225,7 @@
         "user-id": 2294,
         "user-url": "%E7%BB%8F%E7%95%A5%E5%B9%BD%E7%87%95%E6%88%91%E7%AB%A5%E8%B4%AF",
         "user-name": "经略幽燕我童贯",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/22/94_avatar_mid.jpg"
     },
     {
@@ -5323,7 +5323,7 @@
         "user-id": 2330,
         "user-url": "%E5%BE%B7%E5%85%88%E7%94%9F",
         "user-name": "德先生",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5365,7 +5365,7 @@
         "user-id": 2347,
         "user-url": "himalaya",
         "user-name": "himalaya",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5379,7 +5379,7 @@
         "user-id": 2365,
         "user-url": "lmds540",
         "user-name": "lmds540",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5568,7 +5568,7 @@
         "user-id": 2471,
         "user-url": "%E4%B9%A0%E4%B9%A0tv",
         "user-name": "习习tv",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5610,7 +5610,7 @@
         "user-id": 2503,
         "user-url": "%E5%A7%9C%E8%B4%A3%E8%9B%A4",
         "user-name": "姜责蛤",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5708,14 +5708,14 @@
         "user-id": 2571,
         "user-url": "%E5%B0%8F%E7%86%8A%E8%BF%91%E5%B9%B3",
         "user-name": "小熊近平",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/25/71_avatar_mid.jpg"
     },
     {
         "user-id": 2572,
         "user-url": "Acompny",
         "user-name": "Acompny",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5792,7 +5792,7 @@
         "user-id": 2616,
         "user-url": "%E7%90%86%E6%99%BA%E8%86%9C%E5%8C%85",
         "user-name": "理智膜包",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5813,7 +5813,7 @@
         "user-id": 2633,
         "user-url": "ximingze",
         "user-name": "ximingze",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5834,7 +5834,7 @@
         "user-id": 2645,
         "user-url": "%E5%AD%90%E5%BC%B9%E5%B0%96%E5%90%8D%E5%8D%95%E9%95%BF",
         "user-name": "子弹尖名单长",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5932,14 +5932,14 @@
         "user-id": 2736,
         "user-url": "%E7%8E%8B%E6%B1%9F%E6%B0%91",
         "user-name": "王江民",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
         "user-id": 2749,
         "user-url": "diaodaquan",
         "user-name": "江续之",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5953,7 +5953,7 @@
         "user-id": 2752,
         "user-url": "%E5%98%BB%E5%98%BB%E5%93%88%E5%93%88%E5%90%BC%E5%90%BC%E5%90%BC",
         "user-name": "嘻嘻哈哈吼吼吼",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -5974,7 +5974,7 @@
         "user-id": 2765,
         "user-url": "50cent",
         "user-name": "50cent",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -6121,7 +6121,7 @@
         "user-id": 2862,
         "user-url": "FreeDOS",
         "user-name": "FreeDOS",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -6135,7 +6135,7 @@
         "user-id": 2867,
         "user-url": "%E9%B8%9F%E4%B9%8B%E8%AF%97",
         "user-name": "鸟之诗",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/28/67_avatar_mid.jpg"
     },
     {
@@ -6149,7 +6149,7 @@
         "user-id": 2872,
         "user-url": "%E7%8E%8B%E4%BA%8C%E7%8B%97%E5%AD%90",
         "user-name": "王二狗子",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -6254,7 +6254,7 @@
         "user-id": 2908,
         "user-url": "%E4%BD%A0%E4%BD%A0%E4%BD%A0",
         "user-name": "你你你",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -6275,7 +6275,7 @@
         "user-id": 2922,
         "user-url": "%E5%92%96%E5%95%A1%E5%92%96%E5%95%A1",
         "user-name": "咖啡咖啡",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -6317,7 +6317,7 @@
         "user-id": 2945,
         "user-url": "Jafa",
         "user-name": "Jafa",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -6359,14 +6359,14 @@
         "user-id": 2960,
         "user-url": "%E6%9F%B3%E7%B5%AE%E9%A3%9E",
         "user-name": "柳絮飞",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/29/60_avatar_mid.jpg"
     },
     {
         "user-id": 2964,
         "user-url": "%E7%BB%B4%E5%B0%BC%E5%90%83%E8%9C%82%E8%9C%9C",
         "user-name": "维尼吃蜂蜜",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -6408,7 +6408,7 @@
         "user-id": 3005,
         "user-url": "l%E6%9D%8E",
         "user-name": "l李",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
@@ -6443,14 +6443,14 @@
         "user-id": 3043,
         "user-url": "TakakuraAnri",
         "user-name": "TakakuraAnri",
-        "user-description": "",
+        "user-description": null,
         "avatar": null
     },
     {
         "user-id": 3065,
         "user-url": "xiaoping88",
         "user-name": "xiaoping88",
-        "user-description": "",
+        "user-description": null,
         "avatar": "/uploads/avatar/000/00/30/65_avatar_mid.jpg"
     },
     {
