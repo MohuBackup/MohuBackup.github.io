@@ -32,6 +32,12 @@
         type="text/javascript"></script>
     <script src="/static/js/app.js?v=20180503" type="text/javascript"></script>
     <script type="text/javascript" src="/static/js/compatibility.js"></script>
+    <style>
+        a[disabled] {
+            pointer-events: initial !important;
+            cursor: not-allowed;
+        }
+    </style>
     <!--[if lte IE 8]>
 	<script type="text/javascript" src="/static/js/respond.js"></script>
 <![endif]-->
@@ -56,7 +62,7 @@
                 <form class="navbar-search" action="/search/"
                     id="global_search_form" method="post">
                     <input class="form-control search-query" type="text" placeholder="搜索问题、话题或人" autocomplete="off"
-                        name="q" id="aw-search-query" />
+                        name="q" id="aw-search-query" disabled />
                     <span title="搜索" id="global_search_btns" onclick="$('#global_search_form').submit();"><i class="icon icon-search"></i></span>
                     <div class="aw-dropdown">
                         <div class="mod-body">
@@ -91,12 +97,12 @@
 
 					<li><a href="/article/" class="">文章</a></li> -->
 
-                        <li><a href="/topic/"><i class="icon icon-topic"></i>
+                        <li><a disabled><i class="icon icon-topic"></i>
                                 话题</a></li>
-                        <li><a href="/help/"><i class="icon icon-bulb"></i>
+                        <li><a disabled><i class="icon icon-bulb"></i>
                                 公告</a></li>
                         <li>
-                            <a style="font-weight:bold;">· · ·</a>
+                            <a style="font-weight:bold;" disabled>· · ·</a>
                             <div class="dropdown-list pull-right">
                                 <ul id="extensions-nav-list">
                                 </ul>
@@ -109,8 +115,8 @@
             <!-- 用户栏 -->
             <div class="aw-user-nav">
                 <!-- 登陆&注册栏 -->
-                <a class="login btn btn-normal btn-primary" href="/account/login/">登录</a>
-                <a class="register btn btn-normal btn-success" href="/account/register/">注册</a>
+                <a class="login btn btn-normal btn-primary" title="仅供浏览" disabled >登录</a>
+                <a class="register btn btn-normal btn-success" title="仅供浏览" disabled >注册</a>
                 <!-- end 登陆&注册栏 -->
             </div>
             <!-- end 用户栏 -->
@@ -168,7 +174,7 @@
         <div class="container">
             <div class="row">
                 <div class="aw-content-wrap clearfix">
-                    <div class="col-sm-12 col-md-9 aw-main-content">
+                    <div class="col-sm-12 col-md-12 aw-main-content">
                         <!-- 新消息通知 -->
                         <div class="aw-mod aw-notification-box collapse" id="index_notification">
                             <div class="mod-head common-head">
@@ -190,12 +196,6 @@
                         <!-- end 新消息通知 -->
                         <!-- tab切换 -->
                         <ul class="nav nav-tabs aw-nav-tabs active hidden-xs">
-                            <li><a href="/sort_type-unresponsive">等待回复</a></li>
-                            <li><a href="/sort_type-hot__day-7"
-                                    id="sort_control_hot">热门</a></li>
-                            <li><a href="/is_recommend-1">推荐</a></li>
-                            <li class="active"><a href="/">最新</a></li>
-
                             <h2 class="hidden-xs"><i class="icon icon-list"></i> 发现</h2>
                         </ul>
                         <!-- end tab切换 -->
@@ -212,7 +212,8 @@
                                             <h4>
                                                 <a href="/question/1925">如何评价百度百科“20世纪最具影响力的100个人物”词条删除王维林？</a>
                                             </h4>
-                                            <div class="pull-right hidden-xs contribute">
+                                            <!-- 隐藏 贡献者 -->
+                                            <div class="pull-right hidden contribute">
                                                 <span class="pull-right text-color-999">贡献</span>
                                                 <a class="aw-user-name" data-id="673" href="/people/Wallace"
                                                     rel="nofollow"><img src="/uploads/avatar/000/00/06/73_avatar_mid.jpg"
@@ -221,257 +222,12 @@
                                                     rel="nofollow"><img src="/uploads/avatar/000/00/08/81_avatar_mid.jpg"
                                                         alt="" /></a>
                                             </div>
+                                            <!-- end 隐藏 贡献者 -->
 
                                             <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/%E6%A8%A1%E7%B3%8A%E7%9A%84%E8%9B%A4%E5%9B%BD%E5%9C%B0%E7%8B%B1"
-                                                    class="aw-user-name" data-id="1015">模糊的蛤国地狱</a> <span class="text-color-999">回复了问题
+                                                <a class="aw-question-tags">默认分类</a>
+                                                <span class="text-color-999">
                                                     • 6 人关注 • 6 个回复 • 101 次浏览 • 1 分钟前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item " data-topic-id="148,26,111,212,15,143,206,">
-                                        <a class="aw-user-name hidden-xs" data-id="1444" href="/people/gfw98k"
-                                            rel="nofollow"><img src="/static/common/avatar-max-img.png"
-                                                alt="" /></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1921">如何评价最近发布的Windows10神州网信政府版？</a>
-                                            </h4>
-                                            <div class="pull-right hidden-xs contribute">
-                                                <span class="pull-right text-color-999">贡献</span>
-                                                <a class="aw-user-name" data-id="1522" href="/people/%E6%B1%9F%E6%9F%90%E8%86%9C"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/15/22_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                                <a class="aw-user-name" data-id="673" href="/people/Wallace"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/06/73_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                            </div>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/Rayista"
-                                                    class="aw-user-name" data-id="54">Rayista</a> <span class="text-color-999">回复了问题
-                                                    • 6 人关注 • 5 个回复 • 88 次浏览 • 21 分钟前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item active" data-topic-id="725,274,4,8,">
-                                        <a class="aw-user-name hidden-xs" data-id="54" href="/people/Rayista"
-                                            rel="nofollow"><img src="/uploads/avatar/000/00/00/54_avatar_max.jpg"
-                                                alt="" /></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1931">为什么2002年的百度首页是这样的（附图）？</a>
-                                            </h4>
-                                            <a href="/question/1931#!answer_form"
-                                                class="pull-right text-color-999">回复</a>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/Rayista"
-                                                    class="aw-user-name">Rayista</a> <span class="text-color-999">发起了问题
-                                                    • 1 人关注 • 0 个回复 • 3 次浏览 • 34 分钟前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item " data-topic-id="143,">
-                                        <a class="aw-user-name hidden-xs" data-id="1257" href="/people/%E5%81%87%E9%9D%A2%E4%B9%8B%E4%B8%8B"
-                                            rel="nofollow"><img src="/static/common/avatar-max-img.png"
-                                                alt="" /></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1922">为什么我国不采取对影视，游戏等的分级制度</a>
-                                            </h4>
-                                            <div class="pull-right hidden-xs contribute">
-                                                <span class="pull-right text-color-999">贡献</span>
-                                                <a class="aw-user-name" data-id="1044" href="/people/%E7%AD%B9%E5%85%89%E4%BA%A4%E9%94%99"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/10/44_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                                <a class="aw-user-name" data-id="1393" href="/people/Chinese%E6%B7%AB"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/13/93_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                            </div>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/gbsat"
-                                                    class="aw-user-name" data-id="430">小管家</a> <span class="text-color-999">回复了问题
-                                                    • 4 人关注 • 4 个回复 • 75 次浏览 • 2 小时前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item " data-topic-id="160,8,">
-                                        <a class="aw-user-name hidden-xs" data-id="1441" href="/people/%E5%82%BB%E4%B8%AA%E5%84%BF%E7%8E%8B"
-                                            rel="nofollow"><img src="/static/common/avatar-max-img.png"
-                                                alt="" /></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1926">听说大犬要被赶下台了？</a>
-                                            </h4>
-                                            <div class="pull-right hidden-xs contribute">
-                                                <span class="pull-right text-color-999">贡献</span>
-                                                <a class="aw-user-name" data-id="1393" href="/people/Chinese%E6%B7%AB"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/13/93_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                                <a class="aw-user-name" data-id="631" href="/people/Too_Simple"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/06/31_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                            </div>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/gbsat"
-                                                    class="aw-user-name" data-id="430">小管家</a> <span class="text-color-999">回复了问题
-                                                    • 7 人关注 • 6 个回复 • 124 次浏览 • 2 小时前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item " data-topic-id="160,">
-                                        <a class="aw-user-name hidden-xs" data-id="1498" href="/people/%E5%86%B4%E6%9C%88%E9%BA%9F"
-                                            rel="nofollow"><img src="/uploads/avatar/000/00/14/98_avatar_max.jpg"
-                                                alt="" /></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1929">为什么人想做皇帝？</a>
-                                            </h4>
-                                            <div class="pull-right hidden-xs contribute">
-                                                <span class="pull-right text-color-999">贡献</span>
-                                                <a class="aw-user-name" data-id="1522" href="/people/%E6%B1%9F%E6%9F%90%E8%86%9C"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/15/22_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                                <a class="aw-user-name" data-id="430" href="/people/gbsat"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/04/30_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                            </div>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/gbsat"
-                                                    class="aw-user-name" data-id="430">小管家</a> <span class="text-color-999">回复了问题
-                                                    • 3 人关注 • 2 个回复 • 24 次浏览 • 2 小时前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item " data-topic-id="155,4,">
-                                        <a class="aw-user-name hidden-xs" data-id="1393" href="/people/Chinese%E6%B7%AB"
-                                            rel="nofollow"><img src="/uploads/avatar/000/00/13/93_avatar_max.jpg"
-                                                alt="" /></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1927">如何评价AMD的naive级显卡架构？</a>
-                                            </h4>
-                                            <div class="pull-right hidden-xs contribute">
-                                                <span class="pull-right text-color-999">贡献</span>
-                                                <a class="aw-user-name" data-id="881" href="/people/toadfan"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/08/81_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                                <a class="aw-user-name" data-id="673" href="/people/Wallace"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/06/73_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                            </div>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/gbsat"
-                                                    class="aw-user-name" data-id="430">小管家</a> <span class="text-color-999">回复了问题
-                                                    • 3 人关注 • 3 个回复 • 36 次浏览 • 2 小时前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item " data-topic-id="554,675,">
-                                        <a class="aw-user-name hidden-xs" data-id="881" href="/people/toadfan"
-                                            rel="nofollow"><img src="/uploads/avatar/000/00/08/81_avatar_max.jpg"
-                                                alt="" /></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1930">如何评价法国4:2击败克罗地亚赢得世界杯？</a>
-                                            </h4>
-                                            <div class="pull-right hidden-xs contribute">
-                                                <span class="pull-right text-color-999">贡献</span>
-                                                <a class="aw-user-name" data-id="1467" href="/people/Mustang"
-                                                    rel="nofollow"><img src="/static/common/avatar-mid-img.png"
-                                                        alt="" /></a>
-                                                <a class="aw-user-name" data-id="673" href="/people/Wallace"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/06/73_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                            </div>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/%E6%B1%9F%E6%9F%90%E8%86%9C"
-                                                    class="aw-user-name" data-id="1522">江某膜</a> <span class="text-color-999">回复了问题
-                                                    • 5 人关注 • 4 个回复 • 26 次浏览 • 3 小时前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item " data-topic-id="4,635,">
-                                        <a class="aw-user-name hidden-xs" data-id="56" href="/people/globalHe"
-                                            rel="nofollow"><img src="/uploads/avatar/000/00/00/56_avatar_max.jpg"
-                                                alt="" /><i class="icon icon-v"></i></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1924">Hath这个单词可数吗？如果可数，要+1s吗？如果不可数，为什么？</a>
-                                            </h4>
-                                            <div class="pull-right hidden-xs contribute">
-                                                <span class="pull-right text-color-999">贡献</span>
-                                                <a class="aw-user-name" data-id="673" href="/people/Wallace"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/06/73_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                                <a class="aw-user-name" data-id="881" href="/people/toadfan"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/08/81_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                            </div>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/toadfan"
-                                                    class="aw-user-name" data-id="881">江蛤蟆是坠吼的</a> <span class="text-color-999">回复了问题
-                                                    • 3 人关注 • 2 个回复 • 54 次浏览 • 4 小时前 </span>
-                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <div class="aw-item " data-topic-id="304,206,212,300,8,160,144,143,573,">
-                                        <a class="aw-user-name hidden-xs" data-id="881" href="/people/toadfan"
-                                            rel="nofollow"><img src="/uploads/avatar/000/00/08/81_avatar_max.jpg"
-                                                alt="" /></a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1928">赵家人中对习的评价如何？</a>
-                                            </h4>
-                                            <div class="pull-right hidden-xs contribute">
-                                                <span class="pull-right text-color-999">贡献</span>
-                                                <a class="aw-user-name" data-id="500" href="/people/%E9%98%BF%E5%B0%94%E6%B3%95%E8%8B%9F"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/05/00_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                                <a class="aw-user-name" data-id="1393" href="/people/Chinese%E6%B7%AB"
-                                                    rel="nofollow"><img src="/uploads/avatar/000/00/13/93_avatar_mid.jpg"
-                                                        alt="" /></a>
-                                            </div>
-
-                                            <p>
-                                                <a class="aw-question-tags" href="/explore/category-1">默认分类</a>
-                                                • <a href="/people/toadfan"
-                                                    class="aw-user-name" data-id="881">江蛤蟆是坠吼的</a> <span class="text-color-999">回复了问题
-                                                    • 3 人关注 • 3 个回复 • 45 次浏览 • 5 小时前 </span>
                                                 <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
                                             </p>
 
@@ -494,12 +250,10 @@
                         </div>
                     </div>
 
-                    <!-- 侧边栏 -->
-                    <div class="col-sm-12 col-md-3 aw-side-bar hidden-xs hidden-sm">
+                    <!-- 侧边栏 隐藏 -->
+                    <div class="aw-side-bar hidden">
                         <div class="aw-mod aw-text-align-justify">
                             <div class="mod-head">
-                                <a href="/topic/channel-hot"
-                                    class="pull-right">更多 &gt;</a>
                                 <h3>热门话题</h3>
                             </div>
                             <div class="mod-body">
@@ -582,8 +336,6 @@
                         </div>
                         <div class="aw-mod aw-text-align-justify">
                             <div class="mod-head">
-                                <a href="/people/"
-                                    class="pull-right">更多 &gt;</a>
                                 <h3>热门用户</h3>
                             </div>
                             <div class="mod-body">
