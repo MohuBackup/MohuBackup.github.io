@@ -60460,7 +60460,7 @@
         "lastAnswer": null,
         "concerns": 1,
         "views": 19,
-        "publishDate": "2018-11-03"
+        "publishDate": "2018-12-02"
     },
     {
         "id": 4201,
@@ -60708,7 +60708,7 @@
         "lastAnswer": {
             "authorUserID": 2304,
             "authorUserName": "42A",
-            "publishDate": "Invalid date"
+            "publishDate": "2018-11-04"
         },
         "concerns": 2,
         "views": 32,
@@ -60724,7 +60724,7 @@
         "lastAnswer": null,
         "concerns": 1,
         "views": 5,
-        "publishDate": "Invalid date"
+        "publishDate": "2018-11-04"
     },
     {
         "id": 4219,
@@ -60736,7 +60736,7 @@
         "lastAnswer": null,
         "concerns": 1,
         "views": 5,
-        "publishDate": "Invalid date"
+        "publishDate": "2018-11-04"
     },
     {
         "id": 4220,
@@ -60748,11 +60748,11 @@
         "lastAnswer": {
             "authorUserID": null,
             "authorUserName": null,
-            "publishDate": "Invalid date"
+            "publishDate": "2018-11-04"
         },
         "concerns": 2,
         "views": 12,
-        "publishDate": "Invalid date"
+        "publishDate": "2018-11-04"
     },
     {
         "id": 4221,
