@@ -118,7 +118,6 @@ function sortByDate(x) {
 }
 
 var pathname = top.location.pathname
-var el = document.querySelector(".aw-common-list")
 
 var categories = document.querySelectorAll(".category li")
 
@@ -153,13 +152,13 @@ var main = function () {
     var page = pageHashMatch ? +pageHashMatch[1] : 1
     var n = 10
 
-    el.childNodes.forEach(function (x) {
-        x.remove()
-    })
-
     var output = items.slice(n * (page - 1), n * page)
 
-    el.append.apply(el, output)
+    var newEl = document.createElement("div")
+    newEl.classList.add("aw-common-list")
+    newEl.append.apply(newEl, output)
+    var el = document.querySelector(".aw-common-list")
+    el.replaceWith(newEl)
 
     var paginationEl = document.querySelector(".pagination")
     var newPaginationEl = createPaginationUL(page, Math.ceil(items.length / n))
