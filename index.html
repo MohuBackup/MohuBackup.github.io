@@ -178,23 +178,6 @@ permalink: /404.html
                         <div class="aw-mod aw-explore-list">
                             <div class="mod-body">
                                 <div class="aw-common-list">
-                                    <div class="aw-item">
-                                        <a class="aw-user-name hidden-xs">
-                                            <img src="/uploads/avatar/000/00/00/56_avatar_max.jpg" />
-                                        </a>
-                                        <div class="aw-question-content">
-                                            <h4>
-                                                <a href="/question/1925">如何评价百度百科“20世纪最具影响力的100个人物”词条删除王维林？</a>
-                                            </h4>
-
-                                            <p>
-                                                <a class="aw-question-tags">默认分类</a>
-                                                • <a class="aw-user-name">模糊的蛤国地狱</a> <span> 回复了问题
-                                                    • 6 人关注 • 6 个回复 • 101 次浏览 • 1 分钟前
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="mod-footer">
@@ -234,11 +217,13 @@ permalink: /404.html
         <a href="https://twitter.com/XinHaNewsAgency" target="_blank"><span class="label label-warning">@新蛤社</span></a>
     </center>
 
+    <!-- <script src="/backups/_data/test_data.js"></script> -->
+
     <script>
         var articles = {{ site.data.articles | jsonify }}
         var questions = {{ site.data.questions | jsonify }}
     </script>
-    <!-- <script src="_data/test_data.js"></script> -->
-    <script src="./index.js"></script>
+
+    <script src="/index.js"></script>
 
 </body>

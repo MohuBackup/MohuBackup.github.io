@@ -37,11 +37,16 @@ function createItemDiv(type, data) {
     var contentSpan = document.createElement("span")
 
     if (type == "question") {
-        userNameA.text = data.lastAnswer.authorUserName || "匿名用户"
-        contentSpan.innerText = " 回复了问题 • " + data.concerns + " 人关注 • " + data.answersCount + " 个回复 • " + data.views + " 次浏览 • " + data.lastAnswer.publishDate
+        if (data.lastAnswer) {
+            userNameA.text = data.lastAnswer.authorUserName || "匿名用户"
+            contentSpan.innerText = " 回复了问题 • " + data.concerns + " 人关注 • " + data.answersCount + " 个回复 • " + data.views + " 次浏览 • " + data.lastAnswer.publishDate
+        } else {  // 没有回答
+            userNameA.text = data.authorUserName || "匿名用户"
+            contentSpan.innerText = " 发起了问题  • " + data.concerns + " 人关注 • " + data.answersCount + " 个回复 • " + data.views + " 次浏览 • " + data.publishDate
+        }
     } else {
         userNameA.text = data.authorUserName || "匿名用户"
-        contentSpan.innerText = " 发表了文章 • " + data.voters + " 人点赞 • " + data.commentsCount + " 条评论 • " + data.lastAnswer.publishDate
+        contentSpan.innerText = " 发表了文章 • " + data.voters + " 人点赞 • " + data.commentsCount + " 条评论 • " + data.publishDate
     }
 
     contentP.append(tagA, " • ", userNameA, contentSpan)
@@ -53,15 +58,35 @@ function createItemDiv(type, data) {
     return itemDiv
 }
 
+function getDate(x) {
+    var d = x.lastAnswer ? x.lastAnswer.publishDate : x.publishDate
+    return new Date(d)
+}
+
+function sortByDate(x) {
+    return x.sort(function (a, b) {
+        return getDate(b).getTime() - getDate(a).getTime()
+    })
+}
+
 var pathname = top.location.pathname
 var el = document.querySelector(".aw-common-list")
+
+var categories = document.querySelectorAll(".category li")
 
 /** @type {HTMLDivElement[]} */
 var items = []
 
+/** @type {Object[]} */
+var articles = sortByDate(top.articles)
+var questions = sortByDate(top.questions)
+
 if (pathname.indexOf("/article/") == 0) {
     var pathTitle = document.querySelector("#page-title")
     pathTitle.lastChild.replaceWith(" 文章")
+
+    categories[0].classList.toggle("active")
+    categories[2].classList.toggle("active")
 
     items = articles.map(function (x) {
         return createItemDiv("article", x)
