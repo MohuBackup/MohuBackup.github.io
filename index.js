@@ -58,6 +58,54 @@ function createItemDiv(type, data) {
     return itemDiv
 }
 
+/**
+ * @param {number} currentPage 
+ */
+function createPaginationUL(currentPage, maxPage) {
+    /**
+     * @param {number} p 
+     * @param {string=} text 
+     */
+    function createPaginationLI(p, text) {
+        var LI = document.createElement("li")
+
+        var A = document.createElement("a")
+        A.href = "#page_" + p
+        A.text = text || String(p)
+
+        LI.appendChild(A)
+
+        return LI
+    }
+
+    var firstPageLI = createPaginationLI(1, "<<")
+    var previousPageLI = createPaginationLI(currentPage - 1, "<")
+    var nextPageLI = createPaginationLI(currentPage + 1, ">")
+    var lastPageLI = createPaginationLI(maxPage, ">>")
+
+    var paginationLIs = []
+    for (var i = currentPage - 3; i <= currentPage + 3; i++) {
+        if (i > 0 && i <= maxPage) {
+            var LI = createPaginationLI(i)
+            if (i == currentPage) {
+                LI.classList.add("active")
+            }
+            paginationLIs.push(LI)
+        }
+    }
+
+    var paginationUL = document.createElement("ul")
+    paginationUL.classList.add("pagination", "pull-right")
+
+    if (currentPage > 4) /*      */paginationUL.appendChild(firstPageLI)
+    if (currentPage > 1) /*      */paginationUL.appendChild(previousPageLI)
+    /*                           */paginationUL.append.apply(paginationUL, paginationLIs)
+    if (currentPage < maxPage)/* */paginationUL.appendChild(nextPageLI)
+    if (currentPage < maxPage - 3) paginationUL.appendChild(lastPageLI)
+
+    return paginationUL
+}
+
 function getDate(x) {
     var d = x.lastAnswer ? x.lastAnswer.publishDate : x.publishDate
     return new Date(d)
@@ -100,4 +148,23 @@ if (pathname.indexOf("/article/") == 0) {
 
 }
 
-el.append.apply(el, items)
+var main = function () {
+    var pageHashMatch = location.hash.match(/#page_(\d+)/)
+    var page = pageHashMatch ? +pageHashMatch[1] : 1
+    var n = 10
+
+    el.childNodes.forEach(function (x) {
+        x.remove()
+    })
+
+    var output = items.slice(n * (page - 1), n * page)
+
+    el.append.apply(el, output)
+
+    var paginationEl = document.querySelector(".pagination")
+    var newPaginationEl = createPaginationUL(page, Math.ceil(items.length / n))
+    paginationEl.replaceWith(newPaginationEl)
+}
+
+top.onhashchange = main
+main()
