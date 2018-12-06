@@ -120,6 +120,7 @@ function sortByDate(x) {
 var pathname = top.location.pathname
 
 var categories = document.querySelectorAll(".category li")
+var pageTitle = document.querySelector("#page-title")
 
 /** @type {HTMLDivElement[]} */
 var items = []
@@ -128,23 +129,32 @@ var items = []
 var articles = sortByDate(top.articles)
 var questions = sortByDate(top.questions)
 
-if (pathname.indexOf("/article/") == 0) {
-    var pathTitle = document.querySelector("#page-title")
-    pathTitle.lastChild.replaceWith(" 文章")
+var Real404 = pathname.split("/").filter(function (x) {
+    return !!x
+}).length > 1
 
-    categories[0].classList.toggle("active")
-    categories[2].classList.toggle("active")
+if (!Real404) {
+    if (pathname.indexOf("/article/") == 0) {
+        pageTitle.lastChild.replaceWith(" 文章")
 
-    items = articles.map(function (x) {
-        return createItemDiv("article", x)
-    })
+        categories[0].classList.remove("active")
+        categories[2].classList.add("active")
 
+        items = articles.map(function (x) {
+            return createItemDiv("article", x)
+        })
+
+    } else {
+
+        items = questions.map(function (x) {
+            return createItemDiv("question", x)
+        })
+
+    }
 } else {
-
-    items = questions.map(function (x) {
-        return createItemDiv("question", x)
-    })
-
+    categories[0].classList.remove("active")
+    pageTitle.lastChild.replaceWith(" 404 Not Found")
+    pageTitle.firstElementChild.className = "icon icon-forbid"
 }
 
 var main = function () {
