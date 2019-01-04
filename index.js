@@ -131,9 +131,10 @@ var items = []
 var articles = sortByDate(top.articles)
 var questions = sortByDate(top.questions)
 
-var Real404 = pathname.split("/").filter(function (x) {
-    return !!x
-}).length > 1
+var validPaths = ["question", "article", "explore", "", undefined]
+var pathParts = pathname.split("/")
+var Real404 = pathParts.filter(function (x) { return !!x }).length > 1
+    || validPaths.indexOf(pathParts[1]) == -1
 
 if (!Real404) {
     if (pathname.indexOf("/article/") == 0) {
