@@ -127,10 +127,6 @@ var pageTitle = document.querySelector("#page-title")
 /** @type {( () => HTMLDivElement )[]} */
 var items = []
 
-/** @type {Object[]} */
-var articles = sortByDate(top.articles)
-var questions = sortByDate(top.questions)
-
 var validPaths = ["question", "article", "explore", "", undefined]
 var pathParts = pathname.split("/")
 var Real404 = pathParts.filter(function (x) { return !!x }).length > 1
@@ -138,6 +134,10 @@ var Real404 = pathParts.filter(function (x) { return !!x }).length > 1
 
 if (!Real404) {
     if (pathname.indexOf("/article/") == 0) {
+
+        /** @type {Object[]} */
+        var articles = sortByDate(top.articles)
+
         pageTitle.lastChild.replaceWith(" 文章")
 
         categories[0].classList.remove("active")
@@ -148,6 +148,9 @@ if (!Real404) {
         })
 
     } else {
+
+        /** @type {Object[]} */
+        var questions = sortByDate(top.questions)
 
         items = questions.map(function (x) {
             return createItemDiv("question", x)
